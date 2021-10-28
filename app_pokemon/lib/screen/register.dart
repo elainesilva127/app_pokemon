@@ -40,14 +40,11 @@ class _RegisterPageState extends State<RegisterPage> {
           ),
           Row(
             children: [
-              Stack(
-                
-                children: [
-                  Container(
-                  //color: Colors.amber,
+              Stack(children: [
+                Container(
                   child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 15.0, right: 15, top: 20,bottom: 20),
+                    padding: const EdgeInsets.only(
+                        left: 15.0, right: 15, top: 20, bottom: 20),
                     child: Image.asset(
                       'assets/images/pokebola.png',
                       height: 125,
@@ -55,17 +52,15 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                   ),
                 ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 150.0, left: 60),
-                    child: Text('Editar'),
-                  )
-                ]
-              ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 150.0, left: 60),
+                  child: Text('Editar'),
+                )
+              ]),
               Container(
                 child: Container(
-                  decoration: BoxDecoration(
-                      // color: Colors.amber,
-                      borderRadius: BorderRadius.circular(8)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(8)),
                   width: 221,
                   child: Center(
                     child: TextFormField(
@@ -132,7 +127,7 @@ class _RegisterPageState extends State<RegisterPage> {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 13.0,top: 30.0),
+                padding: const EdgeInsets.only(left: 13.0, top: 30.0),
                 child: Container(
                   width: 367,
                   height: 87,
@@ -140,13 +135,12 @@ class _RegisterPageState extends State<RegisterPage> {
                     maxLines: 5,
                     decoration: InputDecoration(
                       hintStyle: TextStyle(
-                          fontSize: 12,
-                        ),
+                        fontSize: 12,
+                      ),
                       labelText: 'Descrição',
                       floatingLabelBehavior: FloatingLabelBehavior.always,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.zero
-                      ),
+                      border:
+                          OutlineInputBorder(borderRadius: BorderRadius.zero),
                     ),
                   ),
                 ),
@@ -159,14 +153,10 @@ class _RegisterPageState extends State<RegisterPage> {
               height: 38,
               width: 233,
               child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
+                onPressed: () {},
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                         Color.fromRGBO(4, 138, 191, 1)),
-                    // foregroundColor: MaterialStateProperty.all(
-                    //     Color.fromRGBO(255, 255, 255, 0 )),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17.0),

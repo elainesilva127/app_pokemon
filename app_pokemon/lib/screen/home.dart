@@ -1,7 +1,6 @@
 import 'package:app_pokemon/screen/initial.dart';
 import 'package:app_pokemon/screen/pokelista.dart';
 import 'package:app_pokemon/screen/register.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,12 +12,10 @@ class HomePage extends StatefulWidget {
 
 class _State extends State<HomePage> {
   int _selectedIndex = 0;
-  var validateBackButton = new Icon(Icons.arrow_back, color: Color.fromRGBO(217, 74, 74, 1));
+  var validateBackButton =
+      new Icon(Icons.arrow_back, color: Color.fromRGBO(217, 74, 74, 1));
   String appbarTitleString = "POKEDEX";
   var appBarTitleText = new Text("POKEDEX");
-
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
   static const List<Widget> _widgetOptions = <Widget>[
     InitialPage(),
@@ -33,7 +30,8 @@ class _State extends State<HomePage> {
         case 0:
           appbarTitleString = "POKEDEX";
           appBarTitleText = new Text(appbarTitleString);
-          validateBackButton = new Icon(Icons.arrow_back, color: Color.fromRGBO(217, 74, 74, 1));
+          validateBackButton =
+              new Icon(Icons.arrow_back, color: Color.fromRGBO(217, 74, 74, 1));
           break;
         case 1:
           appbarTitleString = "POKELISTA";

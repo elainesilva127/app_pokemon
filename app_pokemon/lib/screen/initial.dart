@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class InitialPage extends StatefulWidget {
@@ -37,17 +36,25 @@ class _InitialPageState extends State<InitialPage> {
                   Container(
                     height: 110,
                     width: 162,
-                    child: Padding(
-                      padding:
-                          const EdgeInsets.only(left: 15.0, right: 15, top: 10),
-                      child: Text('Veja os Pokémons da primeira geração',
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 12,
-                              height: 1.5,
-                              fontWeight: FontWeight.normal)),
-                    ),
+                    child: InkWell(
+                        child: RichText(
+                            text: TextSpan(children: [
+                          TextSpan(
+                              text:
+                                  '\n    Veja os Pokémons da\n    primeira geração\n\n',
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 12)),
+                          TextSpan(
+                              text: '   Visualizar\n   Pokémon',
+                              style: TextStyle(color: Colors.red, fontSize: 16))
+                        ])),
+                        onTap: () {
+                          //  Navigator.push(
+                          //   context,
+                          //   new MaterialPageRoute(
+                          //     builder: (context) => new PokelistaPage(),
+                          //   ));
+                        }),
                     decoration: BoxDecoration(
                         color: const Color.fromRGBO(242, 190, 34, 1),
                         boxShadow: const [
@@ -62,17 +69,15 @@ class _InitialPageState extends State<InitialPage> {
                   Container(
                     height: 110,
                     width: 162,
-                    child: Padding(
-                      padding:
-                          const EdgeInsets.only(left: 15.0, right: 15, top: 10),
-                      child: Text('Crie já seu próprio Pokémon',
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 12,
-                              height: 1.5,
-                              fontWeight: FontWeight.normal)),
-                    ),
+                    child: RichText(
+                        text: TextSpan(children: [
+                      TextSpan(
+                          text: '\n    Crie já seu próprio\n    Pokémon\n \n',
+                          style: TextStyle(color: Colors.black, fontSize: 12)),
+                      TextSpan(
+                          text: '   Cadastre novo\n   Pokémon',
+                          style: TextStyle(color: Colors.red, fontSize: 16))
+                    ])),
                     decoration: BoxDecoration(
                         color: const Color.fromRGBO(242, 190, 34, 1),
                         boxShadow: const [
